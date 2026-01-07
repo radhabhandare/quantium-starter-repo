@@ -1,5 +1,5 @@
-# Create a new test file
-cat > setup_test.py << "EOF"
+# Create a new file with proper content
+@"
 import dash
 import pandas as pd
 import sys
@@ -29,4 +29,4 @@ except Exception as e:
 print("="*60)
 print("✅ ENVIRONMENT SETUP COMPLETE - READY FOR DASH DEVELOPMENT")
 print("="*60)
-EOF
+"@ | Out-File -FilePath setup_test.py -Encoding UTF8
